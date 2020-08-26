@@ -11,10 +11,10 @@ exports.run = async (client, message, args) => {
     const formattedRoles = getRoles.map((r) => `\`${r.name}\` - ${r.rank} **(${r.memberCount})**`);
 
     const rankListEmbed = new Discord.MessageEmbed() 
-      .setTitle('Rank Information:')
+      .setTitle('Tiny Trampoline Park Rank Information:')
       .setAuthor(message.author.tag, message.author.displayAvatarURL())
       .setColor(8311585)
       .setDescription(formattedRoles)
-      .setFooter(`qbot | Plugin by TypicallyShadow`);
+      .setFooter(``);
     message.channel.send(rankListEmbed)
 }
